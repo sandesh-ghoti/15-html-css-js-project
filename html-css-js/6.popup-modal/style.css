@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+:root{
+    --transition: all 0.3s linear;
+    --radius: 0.5rem;
+    --letterspacing: 0.5rem;
+    --cursor:pointer;
+}
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: url("https://vanilla-js-basic-project-6-modal.netlify.app/hero.jpeg") center/cover no-repeat;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.box{
+    background-color: #fff;
+    display: grid;
+    padding: 4rem 0;
+    letter-spacing: var(--letterspacing);
+    border-radius: var(--radius);
+}
+.box h1{
+    font-size: 4rem;
+    color: rgb(5, 20, 45);
+    padding-inline: 0.5rem;
+}
+.box button{
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-inline: auto;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: var(--letterspacing);
+    background-color: rgb(59, 179, 215);
+    border-radius: var(--radius);
+    margin-block: 2rem;
+    cursor: var(--cursor);
+}
+.container-1{
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(26, 91, 177, 0.4);
+}
+.show-container{
+    
+    display: grid;
+    place-items: center;
+}
+.box-1{
+    background-color: #fff;
+    border-radius: var(--radius);
+    display:flex;
+    place-items: center;
+    position: relative;
+    padding: 2rem 4rem;
+    font-size: 1.5rem;
+    color:  rgb(5, 20, 45);
+}
+.box-1 button{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: transparent;
+    border: none;
+    color: rgb(158, 36, 36);
+    font-size: 2rem;
+    cursor: var(--cursor);
+}
