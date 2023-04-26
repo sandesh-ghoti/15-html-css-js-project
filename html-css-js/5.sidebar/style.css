@@ -1,0 +1,100 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: auto;
+    height: 100vh;
+}
+.container{
+    width: 100vw;
+    height: 100%;
+    background-color: #f5fcff;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: black;
+    background-color: #fff;
+    display: grid;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.2rem;
+    transition: all 1.5s ease;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    transform: translate(-100%);
+    transition: all 0.3s linear;
+}
+.show-sidebar{
+    transform: translate(0);
+}
+.nav-links ul{
+    display: block;
+    
+}
+.nav-links li{
+    padding-inline: 1rem;
+    color: #4b5363;
+    list-style: none;
+    padding-block: 1rem;
+}
+.nav-links li:hover{
+    background-color: #95cadd;
+    padding-left:1.5rem ;
+    transition: all 0.5s linear;
+}
+a ,li{
+    text-decoration: none;
+    cursor: pointer;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+} 
+.social-links li{
+    margin-inline: 0.5rem;
+    list-style: none;
+    float:left;
+    color: #36a6ce;
+    font-size: 1.5rem;
+    transition: all 1s linear;
+} 
+.social-links li:hover{
+    color: #06252e;
+}
+.logo{
+    display: flex;
+    float: left;
+    font-size: 1.5rem;
+    text-shadow: 0 0.25rem 0.5rem rgb(113, 114, 114);
+    padding: 1rem;
+
+}
+.logo span{
+    color: #36a6ce;
+    margin-left: 0.75rem;
+}
+.menubtn{
+    float: right;
+    border: none;
+    background-color: transparent;
+    margin: 1rem;
+    cursor: pointer;
+    animation: bounce 2s ease-in-out infinite;
+}
+.bars{
+    color: red;
+    font-size: 0.5rem;
+    cursor: pointer;
+}
+
+@media  screen and (max-width:950px) {
+    
+}
+@media screen and (max-width:600px) {
+    
+   
+}
