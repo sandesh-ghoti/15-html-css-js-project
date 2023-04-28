@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <title>form</title>
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="utils.css" />
+        <script
+            src="https://kit.fontawesome.com/fa76c32a84.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="container flex-center">
+            <div class="login flex-center flex-column">
+                <div class="login-header">Login</div>
+                <form>
+                    <input
+                        type="text"
+                        id="namefield"
+                        placeholder="Name"
+                        required
+                    />
+                    <input
+                        type="text"
+                        placeholder="Username/ Email-Id"
+                        required
+                    />
+                    <input
+                        id="password"
+                        type="password"
+                        placeholder="Password"
+                        required
+                    />
+                    <a href="#forget Password" id="forget">Forget password</a>
+                    <input type="button" class="btn" value="Login" />
+                </form>
+                <div class="links flex-center">
+                    <a href="#facebook" id="facebook"
+                        ><i class="fa-brands fa-facebook"></i
+                    ></a>
+                    <a href="#twitter" id="twitter"
+                        ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                    <a href="#github" id="github"
+                        ><i class="fa-brands fa-github"></i
+                    ></a>
+                </div>
+                <div class="signUp flex">
+                    <p>Not a member?</p>
+                    <a href="#signUp"> Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
