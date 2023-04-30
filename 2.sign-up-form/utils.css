@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.grid {
+    display: grid;
+}
+.flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-image: linear-gradient(45deg, #ad777d, #27adde);
+    border: 1px solid transparent;
+    cursor: pointer;
+}
