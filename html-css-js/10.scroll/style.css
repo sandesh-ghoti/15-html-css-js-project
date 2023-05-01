@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;500;700&display=swap");
+:root {
+    --transition: all 0.3s linear;
+    --radius: 0.5rem;
+    --letterspacing: 0.25rem;
+    --cursor: pointer;
+    --highlightColor: #36a6ce;
+    --boxShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --clearWhiteBcg: #fff;
+    --graishBcg: hsl(210, 36%, 96%);
+    --priText: #000;
+    --secText: #fff;
+    --text-shadow: 0 0.25rem 0.5rem rgb(113, 114, 114);
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    scroll-behavior: auto;
+    font-family: "Open Sans", sans-serif;
+    background: var(--graishBcg);
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+h1:not(.logo) {
+    text-transform: uppercase;
+}
+.lastWord {
+    color: var(--highlightColor);
+}
+header {
+    background: linear-gradient(rgba(63, 208, 212, 0.4), rgba(0, 0, 0, 0.7)),
+        url("https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+            center/cover no-repeat;
+}
+nav {
+    background-color: var(--clearWhiteBcg);
+
+    transition: all 0.6s ease;
+}
+.fix {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: var(--boxShadow);
+}
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 2.5rem;
+    text-shadow: var(--text-shadow);
+    padding-left: 1rem;
+    padding-block: 0.5rem;
+}
+.menubtn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+.link-container {
+    overflow: hidden;
+    height: 0;
+    transition: var(--transition);
+}
+.nav-links {
+    list-style: none;
+    transition: var(--transition);
+}
+.nav-links li {
+    text-align: center;
+    font-weight: 500;
+    padding-block: 0.2rem;
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+.nav-links a {
+    color: #0d5068;
+    transition: var(--transition);
+}
+.nav-links li:hover {
+    background-color: #36a6ce;
+}
+
+.home,
+.about,
+.services,
+.tours {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.home {
+    align-items: center;
+}
+.home-content {
+    color: var(--secText);
+    text-align: center;
+}
+.home-content h1 {
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+    padding-bottom: 1rem;
+}
+.home-content a {
+    background-color: transparent;
+    border: solid 3px #fff;
+    padding: 0.8rem;
+    color: var(--secText);
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.home-content button:hover {
+    background-color: #fff;
+    color: var(--highlightColor);
+}
+.home-content p {
+    padding: 0 2rem 2rem;
+}
+.services {
+    background-color: #fff;
+}
+.footer {
+    background-color: #12102e;
+    color: #fff;
+    padding: 5rem 1rem;
+    text-align: center;
+}
+.footer p {
+    text-transform: capitalize;
+    letter-spacing: var(--letterspacing);
+    width: 90vw;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.show {
+    display: inline-block;
+}
+
+.toplink {
+    visibility: hidden;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    bottom: 3rem;
+    right: 1rem;
+    background-color: #36a6ce;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.toplink i {
+    padding: 0.5rem;
+    color: #ffffff;
+}
+.fixToplink {
+    visibility: visible;
+}
+
+@media screen and (min-width: 650px) {
+    .menubtn {
+        display: none;
+    }
+    nav {
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .link-container {
+        height: auto !important;
+        /* nav links always visible in big screen */
+    }
+    .nav-links {
+        display: flex;
+    }
+    .nav-links li {
+        margin-inline: 1rem;
+    }
+    .nav-links a {
+        color: var(--secText);
+    }
+    .fix a {
+        color: var(--highlightColor);
+    }
+    .nav-links li:hover {
+        background-color: transparent;
+    }
+}
